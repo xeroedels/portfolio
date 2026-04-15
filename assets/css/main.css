@@ -3783,3 +3783,15 @@ input, select, textarea {
 			}
 
 		}
+
+.content {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.content:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.4),
+              0 0 40px rgba(0, 0, 255, 0.3);
+}
