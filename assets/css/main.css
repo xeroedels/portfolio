@@ -3795,3 +3795,10 @@ input, select, textarea {
   box-shadow: 0 0 25px rgba(255, 0, 0, 0.4),
               0 0 40px rgba(0, 0, 255, 0.3);
 }
+.logo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+}
