@@ -126,7 +126,7 @@ header.major p {
 	}
 
 	.spotlight .image img {
-		border-radius: 6px;
+		border-radius: 100%;
 		border: 2px solid var(--bg-panel-2);
 		filter: grayscale(15%);
 	}
