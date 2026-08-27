@@ -1,0 +1,230 @@
+/*
+	Custom theme overlay — "Dev x Edit" identity
+	Loaded after main.css (Stellar) to restyle without touching structure.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+	--bg: #0e0f13;
+	--bg-panel: #171922;
+	--bg-panel-2: #1d2029;
+	--line: rgba(255,255,255,0.08);
+	--text: #eceef2;
+	--text-dim: #969bab;
+	--dev: #4fd1c5;
+	--edit: #ff8a5c;
+}
+
+/* Base */
+body, input, select, textarea {
+	font-family: 'Inter', -apple-system, sans-serif;
+	color: var(--text);
+}
+
+body {
+	background: var(--bg);
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Space Grotesk', 'Inter', sans-serif;
+	letter-spacing: -0.01em;
+}
+
+/* Eyebrow / category tags */
+.eyebrow {
+	display: inline-block;
+	font-family: 'JetBrains Mono', monospace;
+	font-size: 0.7rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	padding: 0.25em 0.7em;
+	border-radius: 3px;
+	margin-bottom: 0.9em;
+	border: 1px solid currentColor;
+}
+
+.tag-dev { color: var(--dev); }
+.tag-edit { color: var(--edit); }
+
+/* Header */
+#header {
+	background: var(--bg-panel);
+	border-bottom: 1px solid var(--line);
+}
+
+	#header .logo img {
+		border: 2px solid var(--dev);
+	}
+
+	#header h1 {
+		font-weight: 700;
+	}
+
+	#header p {
+		font-family: 'JetBrains Mono', monospace;
+		color: var(--text-dim);
+		font-size: 0.85rem;
+	}
+
+/* Nav */
+#nav {
+	background: rgba(14,15,19,0.9);
+	border-bottom: 1px solid var(--line);
+}
+
+	#nav ul li a {
+		font-family: 'JetBrains Mono', monospace;
+		font-size: 0.8rem;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: var(--text-dim);
+		border: none;
+	}
+
+	#nav ul li a:hover,
+	#nav ul li a.active {
+		color: var(--edit);
+	}
+
+/* Main sections */
+#main {
+	background: var(--bg);
+}
+
+section.special, article.special {
+	background: var(--bg);
+}
+
+	section.special:nth-of-type(even) {
+		background: var(--bg-panel);
+	}
+
+header.major h2 {
+	font-weight: 700;
+	color: var(--text);
+}
+
+	header.major h2:after {
+		background: linear-gradient(90deg, var(--dev), var(--edit));
+		height: 3px;
+	}
+
+header.major p {
+	color: var(--text-dim);
+	font-family: 'JetBrains Mono', monospace;
+	font-size: 0.85rem;
+}
+
+/* Hero / spotlight */
+.spotlight {
+	background: var(--bg-panel);
+}
+
+	.spotlight .content header.major h2 {
+		font-size: 2rem;
+	}
+
+	.spotlight .image img {
+		border-radius: 6px;
+		border: 2px solid var(--bg-panel-2);
+		filter: grayscale(15%);
+	}
+
+/* Content cards */
+.content {
+	background: var(--bg-panel-2);
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	padding: 1.6em 1.8em;
+	margin-bottom: 1.4em;
+	transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+	.content:hover {
+		transform: translateY(-3px);
+		border-color: var(--dev);
+	}
+
+	.content h3 {
+		font-size: 1.15rem;
+		margin-bottom: 0.4em;
+	}
+
+	.content p {
+		color: var(--text-dim);
+		line-height: 1.6;
+	}
+
+/* Buttons */
+.button, #main .button {
+	font-family: 'JetBrains Mono', monospace;
+	font-size: 0.75rem;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	border-radius: 4px;
+	background: transparent;
+	border: 1px solid var(--dev);
+	color: var(--dev) !important;
+	height: 2.6em;
+	line-height: 2.6em;
+}
+
+	.button:hover, #main .button:hover {
+		background: var(--dev);
+		color: var(--bg) !important;
+	}
+
+	.button.primary, #main .button.primary {
+		border-color: var(--edit);
+		color: var(--edit) !important;
+	}
+
+		.button.primary:hover, #main .button.primary:hover {
+			background: var(--edit);
+			color: var(--bg) !important;
+		}
+
+/* Skills / statistics */
+.statistics {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.2em;
+	justify-content: flex-start;
+}
+
+	.statistics li {
+		flex: 1 1 220px;
+		background: var(--bg-panel-2);
+		border: 1px solid var(--line);
+		border-radius: 8px;
+		padding: 1.4em 1.6em;
+		text-align: left;
+	}
+
+		.statistics li strong {
+			display: block;
+			font-family: 'Space Grotesk', sans-serif;
+			font-size: 1rem;
+			color: var(--edit);
+			margin-bottom: 0.6em;
+		}
+
+		.statistics li:nth-child(1) strong { color: var(--dev); }
+		.statistics li:nth-child(2) strong { color: var(--dev); }
+		.statistics li:nth-child(3) strong { color: var(--edit); }
+
+/* Footer / contact */
+#cta {
+	background: var(--bg-panel);
+}
+
+	#cta .actions.special .button {
+		border-color: var(--edit);
+		color: var(--edit) !important;
+	}
+
+		#cta .actions.special .button.primary {
+			background: var(--edit);
+			color: var(--bg) !important;
+		}
