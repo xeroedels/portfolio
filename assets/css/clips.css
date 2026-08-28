@@ -1,0 +1,63 @@
+/* Clips page — video grid */
+
+#nav {
+	justify-content: flex-start;
+	padding-left: 2em;
+}
+
+	#nav ul li a {
+		display: flex;
+		align-items: center;
+	}
+
+.clip-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 1.6em;
+	margin-top: 1em;
+}
+
+.clip-item {
+	background: var(--bg-panel-2);
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	overflow: hidden;
+	transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+	.clip-item:hover {
+		transform: translateY(-3px);
+		border-color: var(--edit);
+	}
+
+.clip-frame {
+	position: relative;
+	width: 100%;
+	height: 0;
+}
+
+	.clip-frame iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: 0;
+	}
+
+.clip-frame.ratio-16-9 {
+	padding-bottom: 56.25%; /* 16:9 */
+}
+
+.clip-frame.ratio-9-16 {
+	padding-bottom: 177.77%; /* 9:16, for Shorts */
+	max-width: 320px;
+	margin: 0 auto;
+}
+
+/* Keep 9:16 items from stretching full grid width oddly */
+.clip-item:has(.ratio-9-16) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
