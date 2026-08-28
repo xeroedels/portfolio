@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Clips — Sagita Sasmita Wijaya</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+		<link rel="stylesheet" href="assets/css/clips.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<div id="wrapper">
+
+			<!-- Header -->
+				<header id="header" class="alt">
+					<span class="logo"><img src="images/SagitaSasmitaWijaya.jpg" alt="Xero" /></span>
+					<h1>Clips</h1>
+					<p>Video editing &amp; clipping showcase</p>
+				</header>
+
+			<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">&larr; Back to Portfolio</a></li>
+					</ul>
+				</nav>
+
+			<!-- Main -->
+				<div id="main">
+
+					<section id="clips" class="main special">
+						<header class="major">
+							<h2>Clips &amp; Edits</h2>
+							<p>A selection of short-form videos I've cut, paced, and polished.</p>
+						</header>
+
+						<div class="clip-grid">
+
+							<div class="clip-item">
+								<div class="clip-frame ratio-16-9">
+									<iframe src="https://www.youtube.com/embed/lptJ3smGyRE" title="Clip 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+								</div>
+							</div>
+
+							<div class="clip-item">
+								<div class="clip-frame ratio-16-9">
+									<iframe src="https://www.youtube.com/embed/YF_3I0E9GSg" title="Clip 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+								</div>
+							</div>
+
+							<div class="clip-item">
+								<div class="clip-frame ratio-9-16">
+									<iframe src="https://www.youtube.com/embed/GDqs2Tm5NIc" title="Clip 3 (Short)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+								</div>
+							</div>
+
+							<div class="clip-item">
+								<div class="clip-frame ratio-9-16">
+									<iframe src="https://www.youtube.com/embed/RPodagIwY4k" title="Clip 4 (Short)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+								</div>
+							</div>
+
+						</div>
+
+						<ul class="actions" style="margin-top: 2em;">
+							<li><a href="https://www.youtube.com/@xerovier" class="button primary" target="_blank">More on YouTube</a></li>
+							<li><a href="index.html" class="button">Back to Portfolio</a></li>
+						</ul>
+
+					</section>
+
+				</div>
+
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
