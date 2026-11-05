@@ -340,6 +340,56 @@ header.major p {
 	margin-bottom: 0;
 }
 
+/* Project screenshots (hidden automatically if the image file is missing) */
+.project-card .shot {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
+	border: 1px solid var(--line);
+	border-radius: 6px;
+	margin: 0 0 1.1em 0;
+}
+
+.project-card .shot[hidden] {
+	display: none;
+}
+
+/* The featured card spans the full width, so keep its picture from getting huge */
+.project-grid--featured .shot {
+	max-height: 22em;
+}
+
+/* Small screenshot row inside a card */
+.shot-gallery {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 0.6em;
+	width: 100%;
+	margin: 0 0 1.2em 0;
+}
+
+.shot-gallery .thumb {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
+	border: 1px solid var(--line);
+	border-radius: 6px;
+}
+
+.shot-gallery .thumb[hidden] {
+	display: none;
+}
+
+@media screen and (max-width: 736px) {
+	.shot-gallery {
+		grid-template-columns: 1fr;
+	}
+}
+
 /* Tech stack chips */
 .stack {
 	list-style: none;
