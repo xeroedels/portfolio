@@ -1,24 +1,21 @@
 /*
-	Custom theme overlay — "Dev x Edit" identity
-	Loaded after main.css (Stellar) to restyle without touching structure.
+	Overrides for HTML5UP Stellar — keep the template, fix the layout.
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
-
 :root {
-	--bg: #0e0f13;
-	--bg-panel: #171922;
-	--bg-panel-2: #1d2029;
-	--line: rgba(255,255,255,0.08);
-	--text: #eceef2;
-	--text-dim: #969bab;
-	--dev: #4fd1c5;
-	--edit: #ff8a5c;
+	--bg: #121318;
+	--panel: #1a1c24;
+	--line: rgba(255, 255, 255, 0.09);
+	--text: #e6e7eb;
+	--muted: #9a9ca8;
+	--accent: #7eb8b2;
 }
 
-/* Base */
-body, input, select, textarea {
-	font-family: 'Inter', -apple-system, sans-serif;
+body,
+input,
+select,
+textarea {
+	font-family: "Segoe UI", system-ui, sans-serif;
 	color: var(--text);
 }
 
@@ -27,204 +24,342 @@ body {
 }
 
 h1, h2, h3, h4 {
-	font-family: 'Space Grotesk', 'Inter', sans-serif;
-	letter-spacing: -0.01em;
-}
-
-/* Eyebrow / category tags */
-.eyebrow {
-	display: inline-block;
-	font-family: 'JetBrains Mono', monospace;
-	font-size: 0.7rem;
-	letter-spacing: 0.08em;
-	text-transform: uppercase;
-	padding: 0.25em 0.7em;
-	border-radius: 3px;
-	margin-bottom: 0.9em;
-	border: 1px solid currentColor;
-}
-
-.tag-dev { color: var(--dev); }
-.tag-edit { color: var(--edit); }
-
-/* Header */
-#header {
-	background: var(--bg-panel);
-	border-bottom: 1px solid var(--line);
-}
-
-	#header .logo img {
-		border: 2px solid var(--dev);
-	}
-
-	#header h1 {
-		font-weight: 700;
-	}
-
-	#header p {
-		font-family: 'JetBrains Mono', monospace;
-		color: var(--text-dim);
-		font-size: 0.85rem;
-	}
-
-/* Nav */
-#nav {
-	background: rgba(14,15,19,0.9);
-	border-bottom: 1px solid var(--line);
-}
-
-	#nav ul li a {
-		font-family: 'JetBrains Mono', monospace;
-		font-size: 0.8rem;
-		letter-spacing: 0.05em;
-		text-transform: uppercase;
-		color: var(--text-dim);
-		border: none;
-	}
-
-	#nav ul li a:hover,
-	#nav ul li a.active {
-		color: var(--edit);
-	}
-
-/* Main sections */
-#main {
-	background: var(--bg);
-}
-
-section.special, article.special {
-	background: var(--bg);
-}
-
-	section.special:nth-of-type(even) {
-		background: var(--bg-panel);
-	}
-
-header.major h2 {
-	font-weight: 700;
+	font-family: Georgia, "Times New Roman", serif;
+	font-weight: 600;
+	letter-spacing: 0;
 	color: var(--text);
 }
 
-	header.major h2:after {
-		background: linear-gradient(90deg, var(--dev), var(--edit));
-		height: 3px;
+a:focus-visible,
+.button:focus-visible {
+	outline: 2px solid var(--accent);
+	outline-offset: 3px;
+}
+
+/* Header: no giant logo photo, no empty void */
+#header {
+	background: transparent;
+	border: 0;
+	text-align: center;
+}
+
+#header.alt {
+	padding: 3.2em 1.5em 1.4em !important;
+}
+
+#header.alt h1 {
+	font-size: 2rem !important;
+	margin: 0 0 0.25em 0;
+}
+
+#header.alt p {
+	color: var(--muted);
+	font-size: 1rem !important;
+	letter-spacing: 0;
+}
+
+#header.alt .logo {
+	display: none;
+}
+
+/* Simple nav, still visible on phones */
+#nav {
+	background: var(--panel) !important;
+	border: 1px solid var(--line);
+	border-radius: 6px;
+	width: auto !important;
+	max-width: calc(100% - 2em);
+	padding: 0.4em 0.5em !important;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#nav.alt {
+	background: rgba(18, 19, 24, 0.96) !important;
+	border-radius: 6px;
+	top: 0.6em;
+	width: auto !important;
+	max-width: calc(100% - 1.5em);
+}
+
+#nav ul li a {
+	font-size: 0.9rem;
+	letter-spacing: 0;
+	text-transform: none;
+	color: var(--muted) !important;
+	border: 0;
+	background: transparent !important;
+	box-shadow: none !important;
+	border-radius: 4px;
+}
+
+#nav ul li a:hover {
+	color: var(--text) !important;
+	background: transparent !important;
+}
+
+#nav ul li a.active {
+	color: var(--text) !important;
+	background: transparent !important;
+	box-shadow: inset 0 -2px 0 var(--accent) !important;
+	border-radius: 0;
+}
+
+@media screen and (max-width: 736px) {
+	#nav {
+		display: block !important;
+		position: sticky;
+		top: 0.4em;
+		z-index: 10000;
+		width: calc(100% - 1.5em) !important;
 	}
+
+	#nav ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	#nav ul li {
+		margin: 0;
+	}
+
+	#nav ul li a {
+		font-size: 0.8rem;
+		padding: 0 0.65em;
+		height: 2.1em;
+		line-height: 2.1em;
+	}
+
+	#nav + #main {
+		padding-top: 1em;
+	}
+}
+
+#main {
+	background: var(--bg) !important;
+	color: var(--text);
+	box-shadow: none;
+	border-radius: 8px;
+}
+
+#main h1, #main h2, #main h3, #main h4, #main h5, #main h6,
+#main strong, #main b {
+	color: var(--text);
+}
+
+section.special,
+article.special,
+#intro.main,
+#cta {
+	background: transparent;
+}
+
+#intro,
+#first,
+#second,
+#creative,
+#skills,
+#cta {
+	scroll-margin-top: 5em;
+}
+
+header.major h2:after {
+	background: var(--accent);
+	height: 2px;
+	width: 3.5em;
+}
 
 header.major p {
-	color: var(--text-dim);
-	font-family: 'JetBrains Mono', monospace;
-	font-size: 0.85rem;
+	color: var(--muted);
 }
 
-/* Hero / spotlight */
+.label {
+	margin: 0 0 0.35em 0;
+	font-size: 0.8rem;
+	color: var(--accent);
+}
+
+/* About: let the text breathe next to the photo */
 .spotlight {
-	background: var(--bg-panel);
-}
-
-	.spotlight .content header.major h2 {
-		font-size: 2rem;
-	}
-
-	.spotlight .image img {
-		border-radius: 100%;
-		border: 2px solid var(--bg-panel-2);
-		filter: grayscale(15%);
-	}
-
-/* Content cards */
-.content {
-	background: var(--bg-panel-2);
+	background: var(--panel);
 	border: 1px solid var(--line);
 	border-radius: 8px;
-	padding: 1.6em 1.8em;
-	margin-bottom: 1.4em;
-	transition: transform 0.2s ease, border-color 0.2s ease;
+	padding: 2em 2.1em;
+	align-items: center;
+	gap: 1.25em;
 }
 
-	.content:hover {
-		transform: translateY(-3px);
-		border-color: var(--dev);
+.spotlight .content {
+	background: transparent !important;
+	border: 0 !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	transform: none !important;
+	min-width: 0;
+}
+
+.spotlight .content:hover {
+	transform: none !important;
+	border: 0 !important;
+}
+
+.spotlight .content header.major {
+	margin: 0 0 0.9em 0;
+}
+
+.spotlight p {
+	color: var(--muted);
+	line-height: 1.7;
+}
+
+.spotlight .image {
+	margin-left: 0.5em;
+	flex: 0 0 auto;
+	border-color: var(--line);
+}
+
+.spotlight .image img {
+	width: 13em;
+	height: 13em;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+@media screen and (max-width: 980px) {
+	.spotlight {
+		padding: 1.5em 1.2em;
 	}
 
-	.content h3 {
-		font-size: 1.15rem;
-		margin-bottom: 0.4em;
+	.spotlight .image {
+		margin-left: 0;
 	}
+}
 
-	.content p {
-		color: var(--text-dim);
-		line-height: 1.6;
+.project-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1em;
+	text-align: left;
+}
+
+.project-grid--featured {
+	grid-template-columns: 1fr;
+}
+
+.project-card {
+	background: var(--panel);
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	padding: 1.4em 1.5em;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.project-card h3 {
+	font-size: 1.15rem;
+	margin: 0 0 0.45em 0;
+}
+
+.project-card p {
+	color: var(--muted);
+	line-height: 1.65;
+	flex: 1 1 auto;
+	margin-bottom: 1em;
+}
+
+.project-card .actions {
+	margin-bottom: 0;
+}
+
+@media screen and (max-width: 736px) {
+	.project-grid {
+		grid-template-columns: 1fr;
 	}
+}
 
-/* Buttons */
-.button, #main .button {
-	font-family: 'JetBrains Mono', monospace;
-	font-size: 0.75rem;
-	letter-spacing: 0.05em;
-	text-transform: uppercase;
+.button,
+#main .button {
+	font-family: inherit;
+	font-size: 0.85rem;
+	letter-spacing: 0;
+	text-transform: none;
 	border-radius: 4px;
 	background: transparent;
-	border: 1px solid var(--dev);
-	color: var(--dev) !important;
+	box-shadow: inset 0 0 0 1px var(--line) !important;
+	color: var(--text) !important;
 	height: 2.6em;
 	line-height: 2.6em;
+	padding: 0 1.15em;
 }
 
-	.button:hover, #main .button:hover {
-		background: var(--dev);
-		color: var(--bg) !important;
-	}
+.button:hover,
+#main .button:hover {
+	background: #22242d !important;
+	color: var(--text) !important;
+}
 
-	.button.primary, #main .button.primary {
-		border-color: var(--edit);
-		color: var(--edit) !important;
-	}
+.button.primary,
+#main .button.primary {
+	background: var(--accent) !important;
+	box-shadow: none !important;
+	color: #121318 !important;
+}
 
-		.button.primary:hover, #main .button.primary:hover {
-			background: var(--edit);
-			color: var(--bg) !important;
-		}
+.button.primary:hover,
+#main .button.primary:hover {
+	background: #93c7c1 !important;
+	color: #121318 !important;
+}
 
-/* Skills / statistics */
 .statistics {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 1em;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.statistics li {
+	background: var(--panel);
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	padding: 1.2em 1.3em;
+	text-align: left;
+}
+
+.statistics li strong {
+	display: block;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 1.05rem;
+	color: var(--text);
+	margin-bottom: 0.4em;
+}
+
+.statistics li p {
+	margin: 0;
+	color: var(--muted);
+	line-height: 1.55;
+}
+
+@media screen and (max-width: 980px) {
+	.statistics {
+		grid-template-columns: 1fr;
+	}
+}
+
+#cta {
+	background: var(--panel);
+	border: 1px solid var(--line);
+	border-radius: 8px;
+}
+
+#cta .actions.special {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 1.2em;
-	justify-content: flex-start;
+	justify-content: center;
+	gap: 0.5em;
 }
-
-	.statistics li {
-		flex: 1 1 220px;
-		background: var(--bg-panel-2);
-		border: 1px solid var(--line);
-		border-radius: 8px;
-		padding: 1.4em 1.6em;
-		text-align: left;
-	}
-
-		.statistics li strong {
-			display: block;
-			font-family: 'Space Grotesk', sans-serif;
-			font-size: 1rem;
-			color: var(--edit);
-			margin-bottom: 0.6em;
-		}
-
-		.statistics li:nth-child(1) strong { color: var(--dev); }
-		.statistics li:nth-child(2) strong { color: var(--dev); }
-		.statistics li:nth-child(3) strong { color: var(--edit); }
-
-/* Footer / contact */
-#cta {
-	background: var(--bg-panel);
-}
-
-	#cta .actions.special .button {
-		border-color: var(--edit);
-		color: var(--edit) !important;
-	}
-
-		#cta .actions.special .button.primary {
-			background: var(--edit);
-			color: var(--bg) !important;
-		}
