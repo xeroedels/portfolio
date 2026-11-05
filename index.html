@@ -5,6 +5,16 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content="Portfolio of Sagita Sasmita Wijaya, full stack developer and video editor." />
+
+		<!-- Link preview (WhatsApp, LinkedIn, Discord, etc.) -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Sagita Sasmita Wijaya — Portfolio" />
+		<meta property="og:description" content="Full stack developer and video editor." />
+		<meta property="og:image" content="https://xeroedels.github.io/portfolio/images/SagitaSasmitaWijaya.jpg" />
+		<meta property="og:url" content="https://xeroedels.github.io/portfolio/" />
+		<!-- Kalau sudah punya favicon, aktifkan baris ini: -->
+		<!-- <link rel="icon" href="images/favicon.png" /> -->
+
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/custom.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -35,7 +45,7 @@
 					<div class="spotlight">
 						<div class="content">
 							<header class="major">
-								<h2>Sagita Sasmita Wijaya</h2>
+								<h2>Full Stack Developer &amp; Creative Builder</h2>
 							</header>
 							<p>
 								I'm a Full Stack Developer and Creative Builder passionate about crafting modern web applications with interactive UI, smooth animations, and meaningful user experiences.
@@ -55,13 +65,29 @@
 					<header class="major">
 						<h2>Featured Projects</h2>
 					</header>
-					<div class="project-grid project-grid--featured">
-						<article class="project-card">
+
+					<!-- Muncul hanya kalau JavaScript aktif (lihat assets/js/filter.js). Filter ini berlaku untuk Featured dan Projects. -->
+					<div class="filter-bar" role="group" aria-label="Filter projects" hidden>
+						<button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">All</button>
+						<button type="button" class="filter-btn" data-filter="react" aria-pressed="false">React</button>
+						<button type="button" class="filter-btn" data-filter="odoo" aria-pressed="false">Odoo ERP</button>
+						<button type="button" class="filter-btn" data-filter="content" aria-pressed="false">UI &amp; Digital Content</button>
+						<!-- Tambah tombol AI Automation / ASP.NET Core / Vue.js hanya kalau sudah ada proyeknya,
+						     lalu beri tag yang sama di data-tags pada card proyeknya. -->
+					</div>
+
+					<div class="project-grid project-grid--featured" data-filter-grid>
+						<article class="project-card" data-tags="react content">
 							<p class="label">Web app</p>
 							<h3>BloodRaven Archive</h3>
 							<p>
 								An interactive fan archive platform featuring searchable timelines, curated clips, event chronicles, and immersive UI designed to enhance the browsing experience for VTuber fans.
 							</p>
+							<!-- TODO: lengkapi stack BloodRaven (backend, data, dll) dengan yang sebenarnya dipakai -->
+							<ul class="stack" aria-label="Tech stack">
+								<li>Frontend: React</li>
+								<li>Hosting: GitHub Pages</li>
+							</ul>
 							<ul class="actions">
 								<li>
 									<a href="https://xeroedels.github.io/bloodravenarchives/#/" class="button" target="_blank" rel="noopener noreferrer">View project</a>
@@ -71,32 +97,44 @@
 					</div>
 				</section>
 
-				<section id="second" class="main special">
+				<section id="second" class="main special" data-collapse>
 					<header class="major">
 						<h2>Other Projects</h2>
 					</header>
-					<div class="project-grid">
-						<article class="project-card">
+					<div class="project-grid" data-filter-grid>
+						<article class="project-card" data-tags="web">
 							<p class="label">Web app</p>
 							<h3>Fruit CRUD App</h3>
 							<p>
 								An interactive fruit CRUD showcase built with Vite and modern JavaScript.
 							</p>
+							<ul class="stack" aria-label="Tech stack">
+								<li>Vite</li>
+								<li>JavaScript</li>
+								<li>Hosting: GitHub Pages</li>
+							</ul>
 							<ul class="actions">
 								<li>
 									<a href="https://xeroedels.github.io/fruit-app/" class="button" target="_blank" rel="noopener noreferrer">View project</a>
 								</li>
 							</ul>
 						</article>
-						<article class="project-card">
+						<article class="project-card" data-tags="odoo">
 							<p class="label">ERP / backend</p>
 							<h3>Library Management System (Odoo)</h3>
 							<p>
 								A library management system built with Odoo, featuring book inventory management, member registration, borrowing and return tracking, and automated workflows using Odoo's modular ERP framework.
 							</p>
+							<!-- Cek lagi: sesuaikan dengan yang benar-benar kamu pakai di modul ini -->
+							<ul class="stack" aria-label="Tech stack">
+								<li>Odoo</li>
+								<li>Python</li>
+								<li>XML views</li>
+								<li>PostgreSQL</li>
+							</ul>
 							<ul class="actions">
 								<li>
-									<a href="https://github.com/xeroedels/odoo_library_management" class="button" target="_blank" rel="noopener noreferrer">View project</a>
+									<a href="https://github.com/xeroedels/odoo_library_management" class="button" target="_blank" rel="noopener noreferrer">View source</a>
 								</li>
 							</ul>
 						</article>
@@ -141,14 +179,17 @@
 						<li>
 							<strong>Frontend</strong>
 							<p>HTML, CSS, JavaScript, Vue, React</p>
+							<p class="used-in">Used in: BloodRaven Archive, Fruit CRUD App</p>
 						</li>
 						<li>
 							<strong>Backend</strong>
 							<p>ASP.NET Core MVC, C#, Entity Framework Core, SQL Server</p>
+							<!-- Tambahkan baris "Used in: ..." di sini kalau sudah ada proyek ASP.NET Core yang ditampilkan -->
 						</li>
 						<li>
 							<strong>Creative</strong>
 							<p>Video editing, clipping, Canva, UI design</p>
+							<p class="used-in">Used in: VTuber Clips, YouTube channel</p>
 						</li>
 					</ul>
 				</section>
@@ -156,13 +197,16 @@
 				<section id="cta" class="main special">
 					<header class="major">
 						<h2>Contact</h2>
-						<p>Interested in working together or have a project in mind? Feel free to reach out.</p>
+						<p>I'm open to full-time roles, freelance work, and collaborations. Have a project in mind? Get in touch.</p>
 					</header>
 					<footer class="major">
 						<ul class="actions special">
 							<li><a href="mailto:sagitasasmita@gmail.com" class="button primary">Email</a></li>
 							<li><a href="https://wa.me/6289628634629" class="button" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
 							<li><a href="https://www.linkedin.com/in/sagita-sasmita-wijaya-62982a235/" class="button" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+							<!-- Kalau sudah punya CV, taruh di files/CV-Sagita.pdf lalu aktifkan:
+							<li><a href="files/CV-Sagita.pdf" class="button" download>Download CV</a></li>
+							-->
 						</ul>
 					</footer>
 				</section>
@@ -177,6 +221,7 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script src="assets/js/filter.js"></script>
 
 	</body>
 </html>
