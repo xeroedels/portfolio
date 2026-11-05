@@ -3,6 +3,7 @@
 */
 
 :root {
+	color-scheme: dark;
 	--bg: #121318;
 	--panel: #1a1c24;
 	--line: rgba(255, 255, 255, 0.09);
@@ -112,6 +113,10 @@ a:focus-visible,
 		top: 0.4em;
 		z-index: 10000;
 		width: calc(100% - 1.5em) !important;
+		/* sticky + the desktop centering transform can shift the bar; reset it here */
+		left: auto;
+		transform: none;
+		margin: 0 auto;
 	}
 
 	#nav ul {
@@ -125,10 +130,10 @@ a:focus-visible,
 	}
 
 	#nav ul li a {
-		font-size: 0.8rem;
-		padding: 0 0.65em;
-		height: 2.1em;
-		line-height: 2.1em;
+		font-size: 0.85rem;
+		padding: 0 0.8em;
+		height: 2.8em;
+		line-height: 2.8em;
 	}
 
 	#nav + #main {
@@ -150,8 +155,7 @@ a:focus-visible,
 
 section.special,
 article.special,
-#intro.main,
-#cta {
+#intro.main {
 	background: transparent;
 }
 
@@ -236,15 +240,56 @@ header.major p {
 	}
 }
 
+/* Project filter */
+.filter-bar {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.5em;
+	margin: 0 0 1.5em 0;
+}
+
+/* display:flex above would otherwise override the hidden attribute */
+.filter-bar[hidden] {
+	display: none;
+}
+
+.filter-btn {
+	font: inherit;
+	font-size: 0.85rem;
+	line-height: 1;
+	letter-spacing: 0;
+	text-transform: none;
+	color: var(--muted);
+	background: transparent;
+	border: 1px solid var(--line);
+	border-radius: 999px;
+	padding: 0.85em 1.2em;
+	height: auto;
+	cursor: pointer;
+}
+
+.filter-btn:hover {
+	color: var(--text);
+}
+
+.filter-btn.is-active {
+	color: #121318;
+	background: var(--accent);
+	border-color: var(--accent);
+}
+
+.filter-btn:focus-visible {
+	outline: 2px solid var(--accent);
+	outline-offset: 3px;
+}
+
+/* Project cards */
 .project-grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 1em;
 	text-align: left;
-}
-
-.project-grid--featured {
-	grid-template-columns: 1fr;
 }
 
 .project-card {
@@ -258,6 +303,17 @@ header.major p {
 	align-items: flex-start;
 }
 
+/* display:flex / grid above would otherwise override the hidden attribute */
+.project-card[hidden],
+.project-grid[hidden],
+#main > section[hidden] {
+	display: none !important;
+}
+
+.project-grid--featured {
+	grid-template-columns: 1fr;
+}
+
 .project-card h3 {
 	font-size: 1.15rem;
 	margin: 0 0 0.45em 0;
@@ -266,12 +322,43 @@ header.major p {
 .project-card p {
 	color: var(--muted);
 	line-height: 1.65;
-	flex: 1 1 auto;
 	margin-bottom: 1em;
+}
+
+/* Only the description grows; the label must keep its own size and colour */
+.project-card > p:not(.label) {
+	flex: 1 1 auto;
+}
+
+.project-card .label {
+	color: var(--accent);
+	margin: 0 0 0.35em 0;
+	flex: 0 0 auto;
 }
 
 .project-card .actions {
 	margin-bottom: 0;
+}
+
+/* Tech stack chips */
+.stack {
+	list-style: none;
+	margin: 0 0 1.2em 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4em;
+}
+
+.stack li {
+	font-size: 0.78rem;
+	line-height: 1.4;
+	color: var(--text);
+	background: rgba(255, 255, 255, 0.05);
+	border: 1px solid var(--line);
+	border-radius: 4px;
+	padding: 0.2em 0.6em;
+	margin: 0;
 }
 
 @media screen and (max-width: 736px) {
@@ -314,6 +401,7 @@ header.major p {
 	color: #121318 !important;
 }
 
+/* Skills */
 .statistics {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -345,6 +433,12 @@ header.major p {
 	line-height: 1.55;
 }
 
+.statistics li p.used-in {
+	margin-top: 0.7em;
+	font-size: 0.85rem;
+	color: var(--accent);
+}
+
 @media screen and (max-width: 980px) {
 	.statistics {
 		grid-template-columns: 1fr;
@@ -362,4 +456,11 @@ header.major p {
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 0.5em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		transition: none !important;
+		animation: none !important;
+	}
 }
