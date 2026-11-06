@@ -1,366 +1,43 @@
 <!DOCTYPE HTML>
 <html lang="en">
-	<head>
-		<title>Sagita Sasmita Wijaya — Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="Portfolio of Sagita Sasmita Wijaya, full stack developer and video editor." />
-
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Sagita Sasmita Wijaya — Portfolio" />
-		<meta property="og:description" content="Full stack developer and video editor." />
-		<meta property="og:image" content="https://xeroedels.github.io/portfolio/images/SagitaSasmitaWijaya.jpg" />
-		<meta property="og:url" content="https://xeroedels.github.io/portfolio/" />
-
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/custom.css" />
-		<link rel="icon" href="data:,"/>
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-
-		<div id="wrapper">
-
-			<header id="header" class="alt">
-				<h1>Sagita Sasmita Wijaya</h1>
-				<p>Welcome to my portfolio.</p>
-			</header>
-
-			<nav id="nav">
-				<ul>
-					<li><a href="#intro" class="active">Home</a></li>
-					<li><a href="#first">Featured</a></li>
-					<li><a href="#second">Projects</a></li>
-					<li><a href="#creative">Creative</a></li>
-					<li><a href="#art">Game Art</a></li>
-					<li><a href="#skills">Skills</a></li>
-					<li><a href="#cta">Contact</a></li>
-				</ul>
-			</nav>
-
-			<div id="main">
-
-				<section id="intro" class="main">
-					<div class="spotlight">
-						<div class="content">
-							<header class="major">
-								<h2>Sagita Sasmita Wijaya</h2>
-							</header>
-							<p>
-								I'm a Full Stack Developer and Creative Builder passionate about crafting modern web applications with interactive UI, smooth animations, and meaningful user experiences.
-							</p>
-							<p>
-								Beyond software development, I enjoy creating digital content through short-form video editing, clipping, and creative design, combining technical expertise with creativity to build engaging digital experiences.
-							</p>
-							<ul class="actions">
-								<li><a href="#first" class="button">View my work</a></li>
-							</ul>
-						</div>
-						<span class="image"><img src="images/SagitaSasmitaWijaya.jpg" alt="Sagita Sasmita Wijaya" /></span>
-					</div>
-				</section>
-
-				<section id="first" class="main special">
-					<header class="major">
-						<h2>Featured Projects</h2>
-					</header>
-
-					<div class="filter-bar" role="group" aria-label="Filter projects" hidden>
-						<button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">All</button>
-						<button type="button" class="filter-btn" data-filter="vue" aria-pressed="false">Vue.js</button>
-						<button type="button" class="filter-btn" data-filter="aspnet" aria-pressed="false">ASP.NET Core</button>
-						<button type="button" class="filter-btn" data-filter="game" aria-pressed="false">Games</button>
-						<button type="button" class="filter-btn" data-filter="content" aria-pressed="false">UI &amp; Digital Content</button>
-					</div>
-
-					<div class="project-grid project-grid--featured" data-filter-grid>
-						<article class="project-card" data-tags="vue content">
-							<img class="shot" src="images/bloodraven.png" alt="BloodRaven Archive landing page with the title and an Enter Chronicle button" width="1280" height="720" loading="lazy" onerror="this.hidden=true" />
-							<p class="label">Web app</p>
-							<h3>BloodRaven Archive</h3>
-							<p>
-								An interactive fan archive platform for VTuber fans: a searchable timeline of posts grouped by year and date, a clip library with search and POV tags, and a hub that ties them together. 
-								Built with Vue 3 and Vite, using static data and no backend.
-							</p>
-							<div class="shot-gallery">
-								<img class="thumb" src="images/bloodraven-timeline.png" style="object-position: left center;" alt="BloodRaven Archive timeline with posts grouped by year and date, a search bar, and a date picker" width="800" height="450" loading="lazy" onerror="this.hidden=true" />
-								<img class="thumb" src="images/bloodraven-clips.png" alt="BloodRaven Clips page with a search bar and a grid of clip cards with POV tags" width="800" height="450" loading="lazy" onerror="this.hidden=true" />
-								<img class="thumb" src="images/bloodraven-hub.png" alt="BloodRaven Chronicle hub linking to the Archives and Clips sections" width="800" height="450" loading="lazy" onerror="this.hidden=true" />
-							</div>
-							<ul class="stack" aria-label="Tech stack">
-								<li>Frontend: Vue 3 + Vite</li>
-								<li>Data: static files</li>
-								<li>Backend: none</li>
-								<li>Hosting: GitHub Pages</li>
-							</ul>
-							<ul class="actions">
-								<li>
-									<a href="https://xeroedels.github.io/bloodravenarchives/#/" class="button" target="_blank" rel="noopener noreferrer">View project</a>
-								</li>
-							</ul>
-						</article>
-					</div>
-				</section>
-
-				<section id="second" class="main special" data-collapse>
-					<header class="major">
-						<h2>Other Projects</h2>
-					</header>
-					<div class="project-grid" data-filter-grid>
-						<article class="project-card" data-tags="web">
-							<img class="shot" src="images/fruit-crud.png" alt="Screenshot of the Fruit CRUD App" width="1280" height="720" loading="lazy" onerror="this.hidden=true" />
-							<p class="label">Web app</p>
-							<h3>Fruit CRUD App</h3>
-							<p>
-								An interactive fruit CRUD showcase built with Vite and modern JavaScript.
-							</p>
-							<ul class="stack" aria-label="Tech stack">
-								<li>Vite</li>
-								<li>JavaScript</li>
-								<li>Hosting: GitHub Pages</li>
-							</ul>
-							<ul class="actions">
-								<li>
-									<a href="https://xeroedels.github.io/fruit-app/" class="button" target="_blank" rel="noopener noreferrer">View project</a>
-								</li>
-							</ul>
-						</article>
-						<article class="project-card" data-tags="aspnet">
-							<img class="shot" src="images/employee-directory.png" alt="Employee Directory table with a name search, a salary filter, and pagination" width="1280" height="720" loading="lazy" onerror="this.hidden=true" />
-							<p class="label">Web app / backend</p>
-							<h3>Employee Directory</h3>
-							<p>
-								An employee directory built with ASP.NET Core MVC and Entity Framework Core on SQL Server. 
-								It has name search, a salary filter, paginated results over 100 seeded records, and deletion through a REST-style API endpoint called with fetch.
-							</p>
-							<ul class="stack" aria-label="Tech stack">
-								<li>ASP.NET Core MVC</li>
-								<li>C#</li>
-								<li>Entity Framework Core</li>
-								<li>SQL Server</li>
-								<li>.NET 8</li>
-							</ul>
-							<ul class="actions">
-								<li>
-									<a href="https://github.com/xeroedels/employee-directory" class="button" target="_blank" rel="noopener noreferrer">View source</a>
-								</li>
-							</ul>
-						</article>
-						<article class="project-card" data-tags="game">
-							<img class="shot" src="images/flying-jailbird.png" alt="Screenshot of Flying Jailbird gameplay" width="1280" height="720" loading="lazy" onerror="this.hidden=true" />
-							<p class="label">Browser game</p>
-							<h3>Flying Jailbird</h3>
-							<p>
-								A flappy-bird-style browser game where Jailbird tries to escape Ravencroft Manor.
-								Tap, click, or press Space to stay in the air, dodge the pipes, and beat your high score.
-								Playable on desktop and mobile. Character art by @MikeyERBLover on X, BGM is 2:23 AM by @Sharou.
-							</p>
-							<ul class="stack" aria-label="Tech stack">
-								<li>JavaScript</li>
-								<li>HTML5</li>
-								<li>Hosting: itch.io</li>
-							</ul>
-							<ul class="actions">
-								<li>
-									<a href="https://xerovier.itch.io/flying-jailbird" class="button" target="_blank" rel="noopener noreferrer">Play game</a>
-								</li>
-							</ul>
-						</article>
-						<article class="project-card" data-tags="game">
-							<img class="shot" src="images/running-jailbird.png" alt="Screenshot of Running Jailbird gameplay" width="1280" height="720" loading="lazy" onerror="this.hidden=true" />
-							<p class="label">Browser game</p>
-							<h3>Running Jailbird</h3>
-							<p>
-								A browser running game where Jailbird makes a run for it with Rosarian hot on the chase.
-								All pixel art is drawn by me. Playable on desktop and mobile. BGM is 2:23 AM by @Sharou.
-							</p>
-							<ul class="stack" aria-label="Tech stack">
-								<li>JavaScript</li>
-								<li>HTML5</li>
-								<li>Hosting: itch.io</li>
-							</ul>
-							<ul class="actions">
-								<li>
-									<a href="https://xerovier.itch.io/running-jailbird" class="button" target="_blank" rel="noopener noreferrer">Play game</a>
-								</li>
-							</ul>
-						</article>
-						<article class="project-card" data-tags="game">
-							<img class="shot" src="images/rosarian-road-running.png" alt="Screenshot of Rosarian Road Running gameplay" width="1280" height="720" loading="lazy" onerror="this.hidden=true" />
-							<p class="label">Browser game</p>
-							<h3>Rosarian Road Running</h3>
-							<p>
-								A browser running game where Rosarian flees the Mines while Grem, Otomos, and Chattini try to stop the escape.
-								Playable on desktop and mobile. Rosarian art by @Hanaswig, Otomos, Grem, and Chattini art by me, BGM is 2:23 AM by @Sharou.
-							</p>
-							<ul class="stack" aria-label="Tech stack">
-								<li>JavaScript</li>
-								<li>HTML5</li>
-								<li>Hosting: itch.io</li>
-							</ul>
-							<ul class="actions">
-								<li>
-									<a href="https://xerovier.itch.io/rosarian-road-running" class="button" target="_blank" rel="noopener noreferrer">Play game</a>
-								</li>
-							</ul>
-						</article>
-					</div>
-				</section>
-
-				<section id="creative" class="main special">
-					<header class="major">
-						<h2>Creative Works</h2>
-					</header>
-					<div class="project-grid">
-						<article class="project-card">
-							<img class="shot" src="images/vtuber-clips.png" alt="Thumbnail from one of my VTuber clips" width="1280" height="720" loading="lazy" onerror="this.hidden=true" />
-							<p class="label">Video</p>
-							<h3>VTuber Clips</h3>
-							<p>
-								I create engaging short-form videos by selecting highlights, improving pacing, adding subtitles, and optimizing content for social media platforms.
-							</p>
-							<ul class="actions">
-								<li><a href="clips.html" class="button">View clips</a></li>
-							</ul>
-						</article>
-						<article class="project-card">
-							<img class="shot" src="images/youtube-channel.png" alt="Screenshot of my YouTube channel" width="1280" height="720" loading="lazy" onerror="this.hidden=true" />
-							<p class="label">YouTube</p>
-							<h3>YouTube Channel</h3>
-							<p>
-								I also share my video editing and clipping work on my YouTube channel, where I upload curated highlights and short-form content for viewers to enjoy.
-							</p>
-							<ul class="actions">
-								<li>
-									<a href="https://www.youtube.com/@xerovier" class="button" target="_blank" rel="noopener noreferrer">Visit channel</a>
-								</li>
-							</ul>
-						</article>
-					</div>
-				</section>
-
-				<section id="art" class="main special">
-					<header class="major">
-						<h2>Game Art</h2>
-						<p>Pixel art and animated sprites I draw for my games and asset packs.</p>
-					</header>
-					<div class="project-grid">
-						<article class="project-card">
-							<p class="label">Effects</p>
-							<h3>Fire Pack</h3>
-							<p>
-								Animated fire effects for 2D games, drawn in LibreSprite: a fireball and a flame, each in two colors.
-							</p>
-							<div class="sprite-grid">
-								<figure class="sprite">
-									<img src="images/Fireball.gif" alt="Animated orange pixel-art fireball" width="64" height="64" loading="lazy" onerror="this.hidden=true" />
-									<figcaption>Fireball</figcaption>
-								</figure>
-								<figure class="sprite">
-									<img src="images/Fireball_Blue.gif" alt="Animated blue pixel-art fireball" width="64" height="64" loading="lazy" onerror="this.hidden=true" />
-									<figcaption>Fireball, blue</figcaption>
-								</figure>
-								<figure class="sprite">
-									<img src="images/LizFireSpriteRed.gif" alt="Animated red pixel-art flame" width="256" height="256" loading="lazy" onerror="this.hidden=true" />
-									<figcaption>Flame, red</figcaption>
-								</figure>
-								<figure class="sprite">
-									<img src="images/LizFireSprite_much_larger.gif" alt="Animated blue pixel-art flame" width="256" height="256" loading="lazy" onerror="this.hidden=true" />
-									<figcaption>Flame, blue</figcaption>
-								</figure>
-							</div>
-							<ul class="stack" aria-label="Details">
-								<li>Pixel art</li>
-								<li>Animated GIF</li>
-								<li>LibreSprite</li>
-							</ul>
-						</article>
-						<article class="project-card">
-							<p class="label">Characters</p>
-							<h3>Character Sprites</h3>
-							<p>
-								Pixel sprites from my browser games, including Jailpup, Rosarian, Grem, Otomos, and Chattini. All pixel art is drawn by me. Rosarian art by @Hanaswig on X
-							</p>
-							<div class="sprite-grid">
-								<figure class="sprite">
-									<img src="images/Jailpup_Sleepy_larger_size.gif" alt="Animated pixel-art Jailpup sleeping" width="512" height="512" loading="lazy" onerror="this.hidden=true" />
-									<figcaption>Jailpup, sleepy</figcaption>
-								</figure>
-								<figure class="sprite">
-									<img src="images/rosarianchasing.gif" alt="Animated pixel-art Rosarian running in a chase" width="128" height="128" loading="lazy" onerror="this.hidden=true" />
-									<figcaption>Rosarian, chasing</figcaption>
-								</figure>
-								<figure class="sprite">
-									<img src="images/gremrolling.gif" alt="Animated pixel-art Grem rolling" width="50" height="50" loading="lazy" onerror="this.hidden=true" />
-									<figcaption>Grem, rolling</figcaption>
-								</figure>
-								<figure class="sprite">
-									<img src="images/otomos.png" alt="Pixel-art Otomos sprite" width="50" height="50" loading="lazy" onerror="this.hidden=true" />
-									<figcaption>Otomos</figcaption>
-								</figure>
-								<figure class="sprite">
-									<img src="images/chattini.png" alt="Pixel-art Chattini sprite" width="80" height="80" loading="lazy" onerror="this.hidden=true" />
-									<figcaption>Chattini</figcaption>
-								</figure>
-							</div>
-							<ul class="stack" aria-label="Details">
-								<li>Pixel art</li>
-								<li>Sprite animation</li>
-								<li>LibreSprite</li>
-								<li>Piskel</li>
-							</ul>
-						</article>
-					</div>
-				</section>
-
-				<section id="skills" class="main special">
-					<header class="major">
-						<h2>Skills</h2>
-					</header>
-					<ul class="statistics">
-						<li>
-							<strong>Frontend</strong>
-							<p>HTML, CSS, JavaScript, Vue, React</p>
-							<p class="used-in">Used in: BloodRaven Archive, Fruit CRUD App, browser games</p>
-						</li>
-						<li>
-							<strong>Backend</strong>
-							<p>ASP.NET Core MVC, C#, Entity Framework Core, SQL Server</p>
-							<p class="used-in">Used in: Employee Directory</p>
-						</li>
-						<li>
-							<strong>Creative</strong>
-							<p>Video editing (CapCut Pro), clipping, Canva, UI design, Adobe Photoshop CS6, pixel art (LibreSprite, Piskel)</p>
-							<p class="used-in">Used in: VTuber Clips, YouTube channel, Game Art</p>
-						</li>
-					</ul>
-				</section>
-
-				<section id="cta" class="main special">
-					<header class="major">
-						<h2>Contact</h2>
-						<p>I'm open to full-time roles, freelance work, and collaborations. Have a project in mind? Get in touch.</p>
-					</header>
-					<footer class="major">
-						<ul class="actions special">
-							<li><a href="mailto:sagitasasmita@gmail.com" class="button primary">Email</a></li>
-							<li><a href="https://wa.me/6289628634629" class="button" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
-							<li><a href="https://www.linkedin.com/in/sagita-sasmita-wijaya-62982a235/" class="button" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-						</ul>
-					</footer>
-				</section>
-
-			</div>
-		</div>
-
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-		<script src="assets/js/filter.js"></script>
-
-	</body>
+<head>
+<title>Sagita Sasmita Wijaya — Portfolio</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Portfolio of Sagita Sasmita Wijaya, full stack developer and video editor." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Sagita Sasmita Wijaya — Portfolio" />
+<meta property="og:description" content="Full stack developer and video editor." />
+<meta property="og:image" content="https://xeroedels.github.io/portfolio/images/SagitaSasmitaWijaya.jpg" />
+<meta property="og:url" content="https://xeroedels.github.io/portfolio/" />
+<link rel="icon" href="data:," />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" />
+<link rel="stylesheet" href="assets/css/tailwind.css" />
+<link rel="stylesheet" href="assets/css/custom.css" />
+</head>
+<body class="bg-bg font-sans text-text antialiased">
+<div id="wrapper">
+<header id="header" class="alt sticky top-0 z-50 border-b border-line bg-bg"><div class="mx-auto flex max-w-6xl flex-col gap-1 px-6 py-3 md:flex-row md:items-center md:justify-between md:px-10">
+<h1 class="font-display text-lg text-text">Sagita Sasmita Wijaya</h1>
+<nav id="nav"><ul class="flex gap-6 overflow-x-auto whitespace-nowrap text-sm text-muted"><li><a href="#intro" class="block py-1 transition-colors hover:text-text">Home</a></li><li><a href="#first" class="block py-1 transition-colors hover:text-text">Featured</a></li><li><a href="#second" class="block py-1 transition-colors hover:text-text">Projects</a></li><li><a href="#creative" class="block py-1 transition-colors hover:text-text">Creative</a></li><li><a href="#art" class="block py-1 transition-colors hover:text-text">Game Art</a></li><li><a href="#skills" class="block py-1 transition-colors hover:text-text">Skills</a></li><li><a href="#cta" class="block py-1 transition-colors hover:text-text">Contact</a></li></ul></nav></div></header>
+<div id="main">
+<section id="intro" class="main scroll-mt-16 py-16 md:py-28"><div class="spotlight mx-auto grid max-w-6xl items-end gap-12 px-6 md:grid-cols-12 md:px-10">
+<div class="content md:col-span-8"><p class="mb-6 text-xs uppercase tracking-[.2em] text-muted">Welcome to my portfolio.</p>
+<header class="major"><h2 class="font-display text-5xl leading-[1.05] tracking-tight text-text md:text-7xl">Sagita Sasmita Wijaya</h2></header>
+<p class="mt-8 max-w-2xl text-lg leading-8 text-muted">I'm a Full Stack Developer and Creative Builder passionate about crafting modern web applications with interactive UI, smooth animations, and meaningful user experiences.</p><p class="mt-4 max-w-2xl text-lg leading-8 text-muted">Beyond software development, I enjoy creating digital content through short-form video editing, clipping, and creative design, combining technical expertise with creativity to build engaging digital experiences.</p>
+<ul class="actions mt-10"><li><a href="#first" class="button inline-flex items-center gap-2 border-b border-line pb-1 text-sm text-text transition-colors hover:border-accent hover:text-accent">View my work <span aria-hidden="true">&darr;</span></a></li></ul></div>
+<span class="image md:col-span-4"><img class="aspect-square w-full max-w-[18rem] rounded-[3px] border border-line object-cover md:ml-auto" src="images/SagitaSasmitaWijaya.jpg" alt="Sagita Sasmita Wijaya" /></span></div></section><section id="first" class="main special scroll-mt-16 border-t border-line py-16 md:py-24"><div class="mx-auto max-w-6xl px-6 md:px-10"><header class="major mb-12 grid gap-2 md:grid-cols-12 md:gap-8"><p class="text-xs uppercase tracking-[.2em] text-muted md:col-span-3 md:pt-3">01 / Featured</p><h2 class="font-display text-4xl tracking-tight text-text md:col-span-9 md:text-5xl">Featured Projects</h2></header><div class="filter-bar mb-8 flex flex-wrap gap-2" role="group" aria-label="Filter projects" hidden><button type="button" class="filter-btn is-active rounded-[3px] border border-line px-3.5 py-1.5 text-sm text-muted transition-colors hover:text-text" data-filter="all" aria-pressed="true">All</button><button type="button" class="filter-btn rounded-[3px] border border-line px-3.5 py-1.5 text-sm text-muted transition-colors hover:text-text" data-filter="vue" aria-pressed="false">Vue.js</button><button type="button" class="filter-btn rounded-[3px] border border-line px-3.5 py-1.5 text-sm text-muted transition-colors hover:text-text" data-filter="aspnet" aria-pressed="false">ASP.NET Core</button><button type="button" class="filter-btn rounded-[3px] border border-line px-3.5 py-1.5 text-sm text-muted transition-colors hover:text-text" data-filter="game" aria-pressed="false">Games</button><button type="button" class="filter-btn rounded-[3px] border border-line px-3.5 py-1.5 text-sm text-muted transition-colors hover:text-text" data-filter="content" aria-pressed="false">UI &amp; Digital Content</button></div><div class="project-grid project-grid--featured" data-filter-grid><article class="project-card grid gap-8 rounded-[4px] border border-line bg-panel p-5 md:grid-cols-12 md:gap-10 md:p-8" data-tags="vue content"><div class="md:col-span-7">
+<img class="shot mb-3 aspect-[2/1] w-full rounded-[3px] border border-line object-cover" src="images/bloodraven.png" alt="BloodRaven Archive landing page with the title and an Enter Chronicle button" width="1280" height="720" loading="lazy" onerror="this.hidden=true" />
+<div class="shot-gallery grid grid-cols-1 gap-3 sm:grid-cols-3">
+<img class="thumb aspect-[16/9] w-full rounded-[3px] border border-line object-cover" src="images/bloodraven-timeline.png" style="object-position: left center;" alt="BloodRaven Archive timeline with posts grouped by year and date, a search bar, and a date picker" width="800" height="450" loading="lazy" onerror="this.hidden=true" />
+<img class="thumb aspect-[16/9] w-full rounded-[3px] border border-line object-cover" src="images/bloodraven-clips.png" alt="BloodRaven Clips page with a search bar and a grid of clip cards with POV tags" width="800" height="450" loading="lazy" onerror="this.hidden=true" />
+<img class="thumb aspect-[16/9] w-full rounded-[3px] border border-line object-cover" src="images/bloodraven-hub.png" alt="BloodRaven Chronicle hub linking to the Archives and Clips sections" width="800" height="450" loading="lazy" onerror="this.hidden=true" /></div></div>
+<div class="flex flex-col md:col-span-5"><p class="label mb-3 text-[11px] font-medium uppercase tracking-[.18em] text-accent">Web app</p><h3 class="font-display text-[1.65rem] leading-tight text-text mb-3">BloodRaven Archive</h3><p class="text-[15px] leading-7 text-muted flex-1">An interactive fan archive platform for VTuber fans: a searchable timeline of posts grouped by year and date, a clip library with search and POV tags, and a hub that ties them together. Built with Vue 3 and Vite, using static data and no backend.</p><ul class="stack mt-5 flex flex-wrap gap-1.5" aria-label="Tech stack"><li class="rounded-[3px] border border-line px-2 py-1 text-xs text-muted">Frontend: Vue 3 + Vite</li><li class="rounded-[3px] border border-line px-2 py-1 text-xs text-muted">Data: static files</li><li class="rounded-[3px] border border-line px-2 py-1 text-xs text-muted">Backend: none</li><li class="rounded-[3px] border border-line px-2 py-1 text-xs text-muted">Hosting: GitHub Pages</li></ul><ul class="actions mt-auto pt-6"><li><a href="https://xeroedels.github.io/bloodravenarchives/#/" class="button inline-flex items-center gap-2 border-b border-line pb-1 text-sm text-text transition-colors hover:border-accent hover:text-accent" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true">&rarr;</span></a></li></ul></div></article></div></div></section><section id="second" class="main special scroll-mt-16 border-t border-line py-16 md:py-24" data-collapse><div class="mx-auto max-w-6xl px-6 md:px-10"><header class="major mb-12 grid gap-2 md:grid-cols-12 md:gap-8"><p class="text-xs uppercase tracking-[.2em] text-muted md:col-span-3 md:pt-3">02 / Projects</p><h2 class="font-display text-4xl tracking-tight text-text md:col-span-9 md:text-5xl">Other Projects</h2></header><div class="project-grid grid gap-5 md:grid-cols-2" data-filter-grid><article class="project-card flex flex-col rounded-[4px] border border-line bg-panel p-5 md:p-6" data-tags="web"><img class="shot mb-5 aspect-[16/9] w-full rounded-[3px] border border-line object-cover" src="images/fruit-crud.png" alt="Screenshot of the Fruit CRUD App" width="1280" height="720" loading="lazy" onerror="this.hidden=true" /><p class="label mb-3 text-[11px] font-medium uppercase tracking-[.18em] text-accent">Web app</p><h3 class="font-display text-[1.65rem] leading-tight text-text mb-3">Fruit CRUD App</h3><p class="text-[15px] leading-7 text-muted flex-1">An interactive fruit CRUD showcase built with Vite and modern JavaScript.</p><ul class="stack mt-5 flex flex-wrap gap-1.5" aria-label="Tech stack"><li class="rounded-[3px] border border-line px-2 py-1 text-xs text-muted">Vite</li><li class="rounded-[3px] border border-line px-2 py-1 text-xs text-muted">JavaScript</li><li class="rounded-[3px] border border-line px-2 py-1 text-xs text-muted">Hosting: GitHub Pages</li></ul><ul class="actions mt-auto pt-6"><li><a href="https://xeroedels.github.io/fruit-app/" class="button inline-flex items-center gap-2 border-b border-line pb-1 text-sm text-text transition-colors hover:border-accent hover:text-accent" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true">&rarr;</span></a></li></ul></article><article class="project-card flex flex-col rounded-[4px] border border-line bg-panel p-5 md:p-6" data-tags="aspnet"><img class="shot mb-5 aspect-[16/9] w-full rounded-[3px] border border-line object-cover" src="images/employee-directory.png" alt="Employee Directory table with a name search, a salary filter, and pagination" width="1280" height="720" loading="lazy" onerror="this.hidden=true" /><p class="label mb-3 text-[11px] font-medium uppercase tracking-[.18em] text-accent">Web app / backend</p><h3 class="font-display text-[1.65rem] leading-tight text-text mb-3">Employee Directory</h3><p class="text-[15px] leading-7 text-muted flex-1">An employee directory built with ASP.NET Core MVC and Entity Framework Core on SQL Server. It has name search, a salary filter, paginated results over 100 seeded records, and deletion through a REST-style API endpoint called with fetch.</p><ul class="stack mt-5 flex flex-wrap gap-1.5" aria-label="Tech stack"><li class="rounded-[3px] border border-line px-2 py-1 text-xs text-muted">ASP.NET Core MVC</li><li class="rounded-[3px] border border-line px-2 py-1 text-xs text-muted">C#</li><li class="rounded-[3px] border border-line px-2 py-1 text-xs text-muted">Entity Framework Core</li><li class="rounded-[3px] border border-line px-2 py-1 text-xs text-muted">SQL Server</li><li class="rounded-[3px] border border-line px-2 py-1 text-xs text-muted">.NET 8</li></ul><ul class="actions mt-auto pt-6"><li><a href="https://github.com/xeroedels/employee-directory" class="button inline-flex items-center gap-2 border-b border-line pb-1 text-sm text-text transition-colors hover:border-accent hover:text-accent" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">&rarr;</span></a></li></ul></article><article class="project-card flex flex-col rounded-[4px] border border-line bg-panel p-5 md:p-6" data-tags="game"><img class="shot mb-5 aspect-[16/9] w-full rounded-[3px] border border-line object-cover" src="images/flying-jailbird.png" alt="Screenshot of Flying Jailbird gameplay" width="1280" height="720" loading="lazy" onerror="this.hidden=true" /><p class="label mb-3 text-[11px] font-medium uppercase tracking-[.18em] text-accent">Browser game</p><h3 class="font-display text-[1.65rem] leading-tight text-text mb-3">Flying Jailbird</h3><p class="text-[15px] leading-7 text-muted flex-1">A flappy-bird-style browser game where Jailbird tries to escape Ravencroft Manor. Tap, click, or press Space to stay in the air, dodge the pipes, and beat your high score. Playable on desktop and mobile. Character art by @MikeyERBLover on X, BGM is 2:23 AM by @Sharou.</p><ul class="stack mt-5 flex flex-wrap gap-1.5" aria-label="Tech stack"><li class="rounded-[3px] border border-line px-2 py-1 text-xs text-muted">JavaScript</li><li class="rounded-[3px] border border-line px-2 py-1 text-xs text-muted">HTML5</li><li class="rounded-[3px] border border-line px-2 py-1 text-xs text-muted">Hosting: itch.io</li></ul><ul class="actions mt-auto pt-6"><li><a href="https://xerovier.itch.io/flying-jailbird" class="button inline-flex items-center gap-2 border-b border-line pb-1 text-sm text-text transition-colors hover:border-accent hover:text-accent" target="_blank" rel="noopener noreferrer">Play game <span aria-hidden="true">&rarr;</span></a></li></ul></article><article class="project-card flex flex-col rounded-[4px] border border-line bg-panel p-5 md:p-6" data-tags="game"><img class="shot mb-5 aspect-[16/9] w-full rounded-[3px] border border-line object-cover" src="images/running-jailbird.png" alt="Screenshot of Running Jailbird gameplay" width="1280" height="720" loading="lazy" onerror="this.hidden=true" /><p class="label mb-3 text-[11px] font-medium uppercase tracking-[.18em] text-accent">Browser game</p><h3 class="font-display text-[1.65rem] leading-tight text-text mb-3">Running Jailbird</h3><p class="text-[15px] leading-7 text-muted flex-1">A browser running game where Jailbird makes a run for it with Rosarian hot on the chase. All pixel art is drawn by me. Playable on desktop and mobile. BGM is 2:23 AM by @Sharou.</p><ul class="stack mt-5 flex flex-wrap gap-1.5" aria-label="Tech stack"><li class="rounded-[3px] border border-line px-2 py-1 text-xs text-muted">JavaScript</li><li class="rounded-[3px] border border-line px-2 py-1 text-xs text-muted">HTML5</li><li class="rounded-[3px] border border-line px-2 py-1 text-xs text-muted">Hosting: itch.io</li></ul><ul class="actions mt-auto pt-6"><li><a href="https://xerovier.itch.io/running-jailbird" class="button inline-flex items-center gap-2 border-b border-line pb-1 text-sm text-text transition-colors hover:border-accent hover:text-accent" target="_blank" rel="noopener noreferrer">Play game <span aria-hidden="true">&rarr;</span></a></li></ul></article><article class="project-card flex flex-col rounded-[4px] border border-line bg-panel p-5 md:p-6" data-tags="game"><img class="shot mb-5 aspect-[16/9] w-full rounded-[3px] border border-line object-cover" src="images/rosarian-road-running.png" alt="Screenshot of Rosarian Road Running gameplay" width="1280" height="720" loading="lazy" onerror="this.hidden=true" /><p class="label mb-3 text-[11px] font-medium uppercase tracking-[.18em] text-accent">Browser game</p><h3 class="font-display text-[1.65rem] leading-tight text-text mb-3">Rosarian Road Running</h3><p class="text-[15px] leading-7 text-muted flex-1">A browser running game where Rosarian flees the Mines while Grem, Otomos, and Chattini try to stop the escape. Playable on desktop and mobile. Rosarian art by @Hanaswig, Otomos, Grem, and Chattini art by me, BGM is 2:23 AM by @Sharou.</p><ul class="stack mt-5 flex flex-wrap gap-1.5" aria-label="Tech stack"><li class="rounded-[3px] border border-line px-2 py-1 text-xs text-muted">JavaScript</li><li class="rounded-[3px] border border-line px-2 py-1 text-xs text-muted">HTML5</li><li class="rounded-[3px] border border-line px-2 py-1 text-xs text-muted">Hosting: itch.io</li></ul><ul class="actions mt-auto pt-6"><li><a href="https://xerovier.itch.io/rosarian-road-running" class="button inline-flex items-center gap-2 border-b border-line pb-1 text-sm text-text transition-colors hover:border-accent hover:text-accent" target="_blank" rel="noopener noreferrer">Play game <span aria-hidden="true">&rarr;</span></a></li></ul></article></div></div></section><section id="creative" class="main special scroll-mt-16 border-t border-line py-16 md:py-24"><div class="mx-auto max-w-6xl px-6 md:px-10"><header class="major mb-12 grid gap-2 md:grid-cols-12 md:gap-8"><p class="text-xs uppercase tracking-[.2em] text-muted md:col-span-3 md:pt-3">03 / Creative</p><h2 class="font-display text-4xl tracking-tight text-text md:col-span-9 md:text-5xl">Creative Works</h2></header><div class="project-grid grid gap-5 md:grid-cols-2"><article class="project-card flex flex-col rounded-[4px] border border-line bg-panel p-5 md:p-6"><img class="shot mb-5 aspect-[16/9] w-full rounded-[3px] border border-line object-cover" src="images/vtuber-clips.png" alt="Thumbnail from one of my VTuber clips" width="1280" height="720" loading="lazy" onerror="this.hidden=true" /><p class="label mb-3 text-[11px] font-medium uppercase tracking-[.18em] text-accent">Video</p><h3 class="font-display text-[1.65rem] leading-tight text-text mb-3">VTuber Clips</h3><p class="text-[15px] leading-7 text-muted flex-1">I create engaging short-form videos by selecting highlights, improving pacing, adding subtitles, and optimizing content for social media platforms.</p><ul class="actions mt-auto pt-6"><li><a href="clips.html" class="button inline-flex items-center gap-2 border-b border-line pb-1 text-sm text-text transition-colors hover:border-accent hover:text-accent">View clips <span aria-hidden="true">&rarr;</span></a></li></ul></article><article class="project-card flex flex-col rounded-[4px] border border-line bg-panel p-5 md:p-6"><img class="shot mb-5 aspect-[16/9] w-full rounded-[3px] border border-line object-cover" src="images/youtube-channel.png" alt="Screenshot of my YouTube channel" width="1280" height="720" loading="lazy" onerror="this.hidden=true" /><p class="label mb-3 text-[11px] font-medium uppercase tracking-[.18em] text-accent">YouTube</p><h3 class="font-display text-[1.65rem] leading-tight text-text mb-3">YouTube Channel</h3><p class="text-[15px] leading-7 text-muted flex-1">I also share my video editing and clipping work on my YouTube channel, where I upload curated highlights and short-form content for viewers to enjoy.</p><ul class="actions mt-auto pt-6"><li><a href="https://www.youtube.com/@xerovier" class="button inline-flex items-center gap-2 border-b border-line pb-1 text-sm text-text transition-colors hover:border-accent hover:text-accent" target="_blank" rel="noopener noreferrer">Visit channel <span aria-hidden="true">&rarr;</span></a></li></ul></article></div></div></section><section id="art" class="main special scroll-mt-16 border-t border-line py-16 md:py-24"><div class="mx-auto max-w-6xl px-6 md:px-10"><header class="major mb-12 grid gap-2 md:grid-cols-12 md:gap-8"><p class="text-xs uppercase tracking-[.2em] text-muted md:col-span-3 md:pt-3">04 / Game Art</p><h2 class="font-display text-4xl tracking-tight text-text md:col-span-9 md:text-5xl">Game Art</h2><p class="mt-3 max-w-xl text-[15px] leading-7 text-muted md:col-start-4 md:col-span-9">Pixel art and animated sprites I draw for my games and asset packs.</p></header><div class="project-grid grid gap-5 md:grid-cols-2"><article class="project-card flex flex-col rounded-[4px] border border-line bg-panel p-5 md:p-6"><p class="label mb-3 text-[11px] font-medium uppercase tracking-[.18em] text-accent">Effects</p><h3 class="font-display text-[1.65rem] leading-tight text-text mb-3">Fire Pack</h3><p class="text-[15px] leading-7 text-muted mb-5">Animated fire effects for 2D games, drawn in LibreSprite: a fireball and a flame, each in two colors.</p><div class="sprite-grid mb-1 grid grid-cols-3 gap-3"><figure class="sprite m-0"><img class="aspect-square w-full rounded-[3px] border border-line bg-[#e9eaf0] object-contain p-2" src="images/Fireball.gif" alt="Animated orange pixel-art fireball" width="64" height="64" loading="lazy" onerror="this.hidden=true" /><figcaption class="mt-1.5 text-xs text-muted">Fireball</figcaption></figure><figure class="sprite m-0"><img class="aspect-square w-full rounded-[3px] border border-line bg-[#e9eaf0] object-contain p-2" src="images/Fireball_Blue.gif" alt="Animated blue pixel-art fireball" width="64" height="64" loading="lazy" onerror="this.hidden=true" /><figcaption class="mt-1.5 text-xs text-muted">Fireball, blue</figcaption></figure><figure class="sprite m-0"><img class="aspect-square w-full rounded-[3px] border border-line bg-[#e9eaf0] object-contain p-2" src="images/LizFireSpriteRed.gif" alt="Animated red pixel-art flame" width="256" height="256" loading="lazy" onerror="this.hidden=true" /><figcaption class="mt-1.5 text-xs text-muted">Flame, red</figcaption></figure><figure class="sprite m-0"><img class="aspect-square w-full rounded-[3px] border border-line bg-[#e9eaf0] object-contain p-2" src="images/LizFireSprite_much_larger.gif" alt="Animated blue pixel-art flame" width="256" height="256" loading="lazy" onerror="this.hidden=true" /><figcaption class="mt-1.5 text-xs text-muted">Flame, blue</figcaption></figure></div><ul class="stack mt-5 flex flex-wrap gap-1.5" aria-label="Details"><li class="rounded-[3px] border border-line px-2 py-1 text-xs text-muted">Pixel art</li><li class="rounded-[3px] border border-line px-2 py-1 text-xs text-muted">Animated GIF</li><li class="rounded-[3px] border border-line px-2 py-1 text-xs text-muted">LibreSprite</li></ul></article><article class="project-card flex flex-col rounded-[4px] border border-line bg-panel p-5 md:p-6"><p class="label mb-3 text-[11px] font-medium uppercase tracking-[.18em] text-accent">Characters</p><h3 class="font-display text-[1.65rem] leading-tight text-text mb-3">Character Sprites</h3><p class="text-[15px] leading-7 text-muted mb-5">Pixel sprites from my browser games, including Jailpup, Rosarian, Grem, Otomos, and Chattini. All pixel art is drawn by me.</p><div class="sprite-grid mb-1 grid grid-cols-3 gap-3"><figure class="sprite m-0"><img class="aspect-square w-full rounded-[3px] border border-line bg-[#e9eaf0] object-contain p-2" src="images/Jailpup_Sleepy_larger_size.gif" alt="Animated pixel-art Jailpup sleeping" width="512" height="512" loading="lazy" onerror="this.hidden=true" /><figcaption class="mt-1.5 text-xs text-muted">Jailpup, sleepy</figcaption></figure><figure class="sprite m-0"><img class="aspect-square w-full rounded-[3px] border border-line bg-[#e9eaf0] object-contain p-2" src="images/rosarianchasing.gif" alt="Animated pixel-art Rosarian running in a chase" width="128" height="128" loading="lazy" onerror="this.hidden=true" /><figcaption class="mt-1.5 text-xs text-muted">Rosarian, chasing</figcaption></figure><figure class="sprite m-0"><img class="aspect-square w-full rounded-[3px] border border-line bg-[#e9eaf0] object-contain p-2" src="images/gremrolling.gif" alt="Animated pixel-art Grem rolling" width="50" height="50" loading="lazy" onerror="this.hidden=true" /><figcaption class="mt-1.5 text-xs text-muted">Grem, rolling</figcaption></figure><figure class="sprite m-0"><img class="aspect-square w-full rounded-[3px] border border-line bg-[#e9eaf0] object-contain p-2" src="images/otomos.png" alt="Pixel-art Otomos sprite" width="50" height="50" loading="lazy" onerror="this.hidden=true" /><figcaption class="mt-1.5 text-xs text-muted">Otomos</figcaption></figure><figure class="sprite m-0"><img class="aspect-square w-full rounded-[3px] border border-line bg-[#e9eaf0] object-contain p-2" src="images/chattini.png" alt="Pixel-art Chattini sprite" width="80" height="80" loading="lazy" onerror="this.hidden=true" /><figcaption class="mt-1.5 text-xs text-muted">Chattini</figcaption></figure></div><ul class="stack mt-5 flex flex-wrap gap-1.5" aria-label="Details"><li class="rounded-[3px] border border-line px-2 py-1 text-xs text-muted">Pixel art</li><li class="rounded-[3px] border border-line px-2 py-1 text-xs text-muted">Sprite animation</li><li class="rounded-[3px] border border-line px-2 py-1 text-xs text-muted">LibreSprite</li><li class="rounded-[3px] border border-line px-2 py-1 text-xs text-muted">Piskel</li></ul></article></div></div></section><section id="skills" class="main special scroll-mt-16 border-t border-line py-16 md:py-24"><div class="mx-auto max-w-6xl px-6 md:px-10"><header class="major mb-12 grid gap-2 md:grid-cols-12 md:gap-8"><p class="text-xs uppercase tracking-[.2em] text-muted md:col-span-3 md:pt-3">05 / Skills</p><h2 class="font-display text-4xl tracking-tight text-text md:col-span-9 md:text-5xl">Skills</h2></header><ul class="statistics grid gap-10 md:grid-cols-3"><li class="border-t border-line pt-5"><strong class="mb-3 block font-display text-xl font-normal text-text">Frontend</strong><p class="text-[15px] leading-7 text-muted">HTML, CSS, JavaScript, Vue, React</p><p class="used-in mt-3 text-sm text-accent">Used in: BloodRaven Archive, Fruit CRUD App, browser games</p></li><li class="border-t border-line pt-5"><strong class="mb-3 block font-display text-xl font-normal text-text">Backend</strong><p class="text-[15px] leading-7 text-muted">ASP.NET Core MVC, C#, Entity Framework Core, SQL Server</p><p class="used-in mt-3 text-sm text-accent">Used in: Employee Directory</p></li><li class="border-t border-line pt-5"><strong class="mb-3 block font-display text-xl font-normal text-text">Creative</strong><p class="text-[15px] leading-7 text-muted">Video editing (CapCut Pro), clipping, Canva, UI design, Adobe Photoshop CS6, pixel art (LibreSprite, Piskel)</p><p class="used-in mt-3 text-sm text-accent">Used in: VTuber Clips, YouTube channel, Game Art</p></li></ul></div></section><section id="cta" class="main special scroll-mt-16 border-t border-line py-16 md:py-24"><div class="mx-auto max-w-6xl px-6 md:px-10"><header class="major mb-12 grid gap-2 md:grid-cols-12 md:gap-8"><p class="text-xs uppercase tracking-[.2em] text-muted md:col-span-3 md:pt-3">06 / Contact</p><h2 class="font-display text-4xl tracking-tight text-text md:col-span-9 md:text-5xl">Contact</h2><p class="mt-3 max-w-xl text-[15px] leading-7 text-muted md:col-start-4 md:col-span-9">I'm open to full-time roles, freelance work, and collaborations. Have a project in mind? Get in touch.</p></header><footer class="major"><ul class="actions special flex flex-wrap gap-3"><li><a href="mailto:sagitasasmita@gmail.com" class="button primary inline-flex items-center rounded-[3px] bg-accent px-5 py-3 text-sm font-medium text-bg transition-opacity hover:opacity-90">Email</a></li><li><a href="https://wa.me/6289628634629" class="button inline-flex items-center rounded-[3px] border border-line px-5 py-3 text-sm text-text transition-colors hover:border-accent hover:text-accent" target="_blank" rel="noopener noreferrer">WhatsApp</a></li><li><a href="https://www.linkedin.com/in/sagita-sasmita-wijaya-62982a235/" class="button inline-flex items-center rounded-[3px] border border-line px-5 py-3 text-sm text-text transition-colors hover:border-accent hover:text-accent" target="_blank" rel="noopener noreferrer">LinkedIn</a></li></ul></footer></div></section>
+</div>
+</div>
+<script src="assets/js/filter.js"></script>
+<script src="assets/js/nav.js"></script>
+</body>
 </html>
