@@ -1,9 +1,4 @@
-/*
-	Screenshot slider.
-	Markup: [data-slider] > .slides (images) + .slider-prev + .slider-next + .slider-dots + .slider-count
-	Works by touch swipe and trackpad scroll even without this script; this adds arrows, dots,
-	a counter, and left/right arrow keys. Images that fail to load are skipped automatically.
-*/
+
 (function () {
 	var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
