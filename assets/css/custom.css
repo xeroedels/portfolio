@@ -1,3 +1,7 @@
+/*
+	Overrides for HTML5UP Stellar — keep the template, fix the layout.
+*/
+
 :root {
 	color-scheme: dark;
 	--bg: #121318;
@@ -33,6 +37,7 @@ a:focus-visible,
 	outline-offset: 3px;
 }
 
+/* Header: no giant logo photo, no empty void */
 #header {
 	background: transparent;
 	border: 0;
@@ -58,6 +63,7 @@ a:focus-visible,
 	display: none;
 }
 
+/* Simple nav, still visible on phones */
 #nav {
 	background: var(--panel) !important;
 	border: 1px solid var(--line);
@@ -107,6 +113,7 @@ a:focus-visible,
 		top: 0.4em;
 		z-index: 10000;
 		width: calc(100% - 1.5em) !important;
+		/* sticky + the desktop centering transform can shift the bar; reset it here */
 		left: auto;
 		transform: none;
 		margin: 0 auto;
@@ -178,6 +185,7 @@ header.major p {
 	color: var(--accent);
 }
 
+/* About: let the text breathe next to the photo */
 .spotlight {
 	background: var(--panel);
 	border: 1px solid var(--line);
@@ -233,6 +241,7 @@ header.major p {
 	}
 }
 
+/* Project filter */
 .filter-bar {
 	display: flex;
 	flex-wrap: wrap;
@@ -271,6 +280,7 @@ header.major p {
 	outline-offset: 3px;
 }
 
+/* Project cards */
 .project-grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -293,6 +303,7 @@ header.major p {
 	align-items: flex-start;
 }
 
+/* display:flex / grid above would otherwise override the hidden attribute */
 .project-card[hidden],
 .project-grid[hidden],
 #main > section[hidden],
@@ -311,6 +322,7 @@ header.major p {
 	margin-bottom: 1em;
 }
 
+/* Only the description grows; the label must keep its own size and colour */
 .project-card > p:not(.label) {
 	flex: 1 1 auto;
 }
@@ -325,6 +337,7 @@ header.major p {
 	margin-bottom: 0;
 }
 
+/* Project screenshots (hidden automatically if the image file is missing) */
 .project-card .shot {
 	display: block;
 	width: 100%;
@@ -340,10 +353,12 @@ header.major p {
 	display: none;
 }
 
+/* The featured card spans the full width, so keep its picture from getting huge */
 .project-grid--featured .shot {
 	max-height: 22em;
 }
 
+/* Screenshot slider: swipe, arrows, dots (class names kept from the old thumbnail row) */
 .shot-gallery {
 	position: relative;
 	width: 100%;
@@ -473,6 +488,7 @@ header.major p {
 	display: none;
 }
 
+/* Pixel-art sprites: light tiles so dark outlines stay visible, crisp scaling */
 .sprite-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
@@ -511,6 +527,7 @@ header.major p {
 	color: var(--muted);
 }
 
+/* Tech stack chips */
 .stack {
 	list-style: none;
 	margin: 0 0 1.2em 0;
@@ -571,6 +588,7 @@ header.major p {
 	color: #121318 !important;
 }
 
+/* Skills */
 .statistics {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
