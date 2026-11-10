@@ -78,16 +78,21 @@
 					<div class="project-grid project-grid--featured" data-filter-grid>
 						<article class="project-card" data-tags="vue content">
 							<div class="shot-gallery" data-slider role="region" aria-roledescription="carousel" aria-label="BloodRaven Archive screenshots" tabindex="0">
-								<div class="slides">
-									<img class="shot" src="images/bloodraven.png" alt="BloodRaven Archive landing page with the title and an Enter Chronicle button" width="1280" height="720" onerror="this.hidden=true" />
-									<img class="thumb" src="images/bloodraven-timeline.png" style="object-position: left center;" alt="BloodRaven Archive timeline with posts grouped by year and date, a search bar, and a date picker" width="800" height="450" onerror="this.hidden=true" />
-									<img class="thumb" src="images/bloodraven-clips.png" alt="BloodRaven Clips page with a search bar and a grid of clip cards with POV tags" width="800" height="450" onerror="this.hidden=true" />
-									<img class="thumb" src="images/bloodraven-hub.png" alt="BloodRaven Chronicle hub linking to the Archives and Clips sections" width="800" height="450" onerror="this.hidden=true" />
+								<div class="slider-stage">
+									<div class="slides">
+										<img data-caption="Landing page" class="shot" src="images/bloodraven.png" alt="BloodRaven Archive landing page with the title and an Enter Chronicle button" width="1280" height="720" onerror="this.hidden=true" />
+										<img data-caption="Archive timeline" class="thumb" src="images/bloodraven-timeline.png" style="object-position: left center;" alt="BloodRaven Archive timeline with posts grouped by year and date, a search bar, and a date picker" width="800" height="450" onerror="this.hidden=true" />
+										<img data-caption="Clip library" class="thumb" src="images/bloodraven-clips.png" alt="BloodRaven Clips page with a search bar and a grid of clip cards with POV tags" width="800" height="450" onerror="this.hidden=true" />
+										<img data-caption="Chronicle hub" class="thumb" src="images/bloodraven-hub.png" alt="BloodRaven Chronicle hub linking to the Archives and Clips sections" width="800" height="450" onerror="this.hidden=true" />
+									</div>
+									<button type="button" class="slider-btn slider-prev" aria-label="Previous screenshot" hidden><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+									<button type="button" class="slider-btn slider-next" aria-label="Next screenshot" hidden><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
 								</div>
-								<button type="button" class="slider-btn slider-prev" aria-label="Previous screenshot" hidden>&#8249;</button>
-								<button type="button" class="slider-btn slider-next" aria-label="Next screenshot" hidden>&#8250;</button>
-								<div class="slider-dots" hidden></div>
-								<span class="slider-count" aria-live="polite" hidden></span>
+								<div class="slider-bar" hidden>
+									<span class="slider-caption" aria-live="polite"></span>
+									<div class="slider-dots"></div>
+									<span class="slider-count"></span>
+								</div>
 							</div>
 							<p class="label">Web app</p>
 							<h3>BloodRaven Archive</h3>
@@ -172,16 +177,21 @@
 						</article>
 						<article class="project-card" data-tags="react">
 							<div class="shot-gallery" data-slider role="region" aria-roledescription="carousel" aria-label="ChronoFlow screenshots" tabindex="0">
-								<div class="slides">
-									<img class="shot" src="images/Chronoflow-dashboard.png" style="object-position: left top;" alt="ChronoFlow dashboard with a sidebar, a search bar, summary counts, and recent timelines" width="1280" height="720" onerror="this.hidden=true" />
-									<img class="thumb" src="images/Chronoflow-home.png" alt="ChronoFlow landing page with the headline Plan visually. Stay on track." width="800" height="450" onerror="this.hidden=true" />
-									<img class="thumb" src="images/Chronoflow-signin.png" alt="ChronoFlow sign-in page with Continue with Google and email sign-in" width="800" height="450" onerror="this.hidden=true" />
-									<img class="thumb" src="images/Chronoflow-splash.png" alt="ChronoFlow splash screen with the logo and tagline" width="800" height="450" onerror="this.hidden=true" />
+								<div class="slider-stage">
+									<div class="slides">
+										<img data-caption="Dashboard" class="shot" src="images/Chronoflow-dashboard.png" style="object-position: left top;" alt="ChronoFlow dashboard with a sidebar, a search bar, summary counts, and recent timelines" width="1280" height="720" onerror="this.hidden=true" />
+										<img data-caption="Landing page" class="thumb" src="images/Chronoflow-home.png" alt="ChronoFlow landing page with the headline Plan visually. Stay on track." width="800" height="450" onerror="this.hidden=true" />
+										<img data-caption="Sign in with Google or email" class="thumb" src="images/Chronoflow-signin.png" alt="ChronoFlow sign-in page with Continue with Google and email sign-in" width="800" height="450" onerror="this.hidden=true" />
+										<img data-caption="Splash screen" class="thumb" src="images/Chronoflow-splash.png" alt="ChronoFlow splash screen with the logo and tagline" width="800" height="450" onerror="this.hidden=true" />
+									</div>
+									<button type="button" class="slider-btn slider-prev" aria-label="Previous screenshot" hidden><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+									<button type="button" class="slider-btn slider-next" aria-label="Next screenshot" hidden><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
 								</div>
-								<button type="button" class="slider-btn slider-prev" aria-label="Previous screenshot" hidden>&#8249;</button>
-								<button type="button" class="slider-btn slider-next" aria-label="Next screenshot" hidden>&#8250;</button>
-								<div class="slider-dots" hidden></div>
-								<span class="slider-count" aria-live="polite" hidden></span>
+								<div class="slider-bar" hidden>
+									<span class="slider-caption" aria-live="polite"></span>
+									<div class="slider-dots"></div>
+									<span class="slider-count"></span>
+								</div>
 							</div>
 							<p class="label">Web app · In progress</p>
 							<h3>ChronoFlow</h3>
