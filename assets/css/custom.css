@@ -1,6 +1,3 @@
-/*
-	Overrides for HTML5UP Stellar — keep the template, fix the layout.
-*/
 
 :root {
 	color-scheme: dark;
@@ -37,7 +34,6 @@ a:focus-visible,
 	outline-offset: 3px;
 }
 
-/* Header: no giant logo photo, no empty void */
 #header {
 	background: transparent;
 	border: 0;
@@ -63,7 +59,6 @@ a:focus-visible,
 	display: none;
 }
 
-/* Simple nav, still visible on phones */
 #nav {
 	background: var(--panel) !important;
 	border: 1px solid var(--line);
@@ -113,7 +108,6 @@ a:focus-visible,
 		top: 0.4em;
 		z-index: 10000;
 		width: calc(100% - 1.5em) !important;
-		/* sticky + the desktop centering transform can shift the bar; reset it here */
 		left: auto;
 		transform: none;
 		margin: 0 auto;
@@ -184,8 +178,6 @@ header.major p {
 	font-size: 0.8rem;
 	color: var(--accent);
 }
-
-/* About: let the text breathe next to the photo */
 .spotlight {
 	background: var(--panel);
 	border: 1px solid var(--line);
@@ -241,7 +233,6 @@ header.major p {
 	}
 }
 
-/* Project filter */
 .filter-bar {
 	display: flex;
 	flex-wrap: wrap;
@@ -280,7 +271,6 @@ header.major p {
 	outline-offset: 3px;
 }
 
-/* Project cards */
 .project-grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -303,7 +293,6 @@ header.major p {
 	align-items: flex-start;
 }
 
-/* display:flex / grid above would otherwise override the hidden attribute */
 .project-card[hidden],
 .project-grid[hidden],
 #main > section[hidden],
@@ -322,7 +311,6 @@ header.major p {
 	margin-bottom: 1em;
 }
 
-/* Only the description grows; the label must keep its own size and colour */
 .project-card > p:not(.label) {
 	flex: 1 1 auto;
 }
@@ -337,7 +325,6 @@ header.major p {
 	margin-bottom: 0;
 }
 
-/* Project screenshots (hidden automatically if the image file is missing) */
 .project-card .shot {
 	display: block;
 	width: 100%;
@@ -353,20 +340,21 @@ header.major p {
 	display: none;
 }
 
-/* The featured card spans the full width, so keep its picture from getting huge */
 .project-grid--featured .shot {
 	max-height: 22em;
 }
 
-/* Screenshot slider: swipe, arrows, dots (class names kept from the old thumbnail row) */
 .shot-gallery {
-	position: relative;
 	width: 100%;
 	margin: 0 0 1.1em 0;
 }
 
 .project-grid--featured .shot-gallery {
 	max-width: 48em;
+}
+
+.slider-stage {
+	position: relative;
 }
 
 .shot-gallery .slides {
@@ -376,7 +364,7 @@ header.major p {
 	scrollbar-width: none;
 	background: var(--bg);
 	border: 1px solid var(--line);
-	border-radius: 6px;
+	border-radius: 8px;
 }
 
 .shot-gallery .slides::-webkit-scrollbar {
@@ -395,6 +383,7 @@ header.major p {
 	border: 0;
 	border-radius: 0;
 	scroll-snap-align: start;
+	cursor: zoom-in;
 }
 
 .shot-gallery .slides img[hidden] {
@@ -414,22 +403,22 @@ header.major p {
 	transform: translateY(-50%);
 	display: grid;
 	place-items: center;
-	width: 2.4rem;
-	height: 2.4rem;
+	width: 2.6rem;
+	height: 2.6rem;
 	border: 1px solid var(--line);
 	border-radius: 50%;
-	background: rgba(18, 19, 24, 0.8);
-	color: var(--text);
-	font-size: 1.5rem;
-	line-height: 1;
+	background: rgba(18, 19, 24, 0.85);
+	box-shadow: none !important;
+	color: var(--text) !important;
 	cursor: pointer;
+	transition: opacity 0.2s ease, border-color 0.2s ease;
 }
 
-.slider-prev { left: 0.6rem; }
-.slider-next { right: 0.6rem; }
+.slider-prev { left: 0.7rem; }
+.slider-next { right: 0.7rem; }
 
-.slider-btn:hover {
-	background: rgba(18, 19, 24, 0.95);
+.slider-btn:hover,
+.slider-btn:focus-visible {
 	border-color: var(--accent);
 }
 
@@ -440,55 +429,96 @@ header.major p {
 }
 
 .slider-btn:disabled {
-	opacity: 0.35;
-	cursor: default;
+	visibility: hidden;
+}
+
+@media (hover: hover) {
+	.slider-btn { opacity: 0; }
+	.slider-stage:hover .slider-btn,
+	.shot-gallery:focus-within .slider-btn { opacity: 1; }
+}
+
+.slider-bar {
+	display: flex;
+	align-items: center;
+	gap: 0.8rem;
+	margin-top: 0.55rem;
+}
+
+.slider-caption {
+	flex: 1 1 auto;
+	min-width: 0;
+	color: var(--muted);
+	font-size: 0.82rem;
+	line-height: 1.3;
 }
 
 .slider-dots {
-	position: absolute;
-	left: 50%;
-	bottom: 0.5rem;
-	transform: translateX(-50%);
 	display: flex;
-	padding: 0 0.3rem;
-	border-radius: 999px;
-	background: rgba(18, 19, 24, 0.7);
+	align-items: center;
 }
 
 .slider-dot {
 	all: unset;
 	box-sizing: content-box;
-	width: 0.5rem;
-	height: 0.5rem;
-	padding: 0.3rem;
-	border-radius: 50%;
-	background: rgba(255, 255, 255, 0.4);
+	width: 0.45rem;
+	height: 0.45rem;
+	padding: 0.4rem 0.2rem;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.28);
 	background-clip: content-box;
+	box-shadow: none !important;
 	cursor: pointer;
+	transition: width 0.25s ease, background-color 0.25s ease;
+}
+
+.slider-dot:hover {
+	background-color: rgba(255, 255, 255, 0.5);
 }
 
 .slider-dot.is-active {
+	width: 1.3rem;
 	background-color: var(--accent);
 }
 
 .slider-count {
-	position: absolute;
-	top: 0.6rem;
-	right: 0.6rem;
-	padding: 0.15em 0.6em;
-	border-radius: 999px;
-	background: rgba(18, 19, 24, 0.8);
-	color: var(--text);
-	font-size: 0.75rem;
+	min-width: 2.6em;
+	color: var(--muted);
+	font-size: 0.78rem;
+	text-align: right;
+	font-variant-numeric: tabular-nums;
 }
 
 .slider-btn[hidden],
-.slider-dots[hidden],
-.slider-count[hidden] {
+.slider-bar[hidden] {
 	display: none;
 }
 
-/* Pixel-art sprites: light tiles so dark outlines stay visible, crisp scaling */
+.lightbox {
+	padding: 0;
+	border: 0;
+	background: transparent;
+	max-width: 96vw;
+	max-height: 96vh;
+	overflow: visible;
+}
+
+.lightbox::backdrop {
+	background: rgba(8, 9, 12, 0.9);
+}
+
+.lightbox img {
+	display: block;
+	max-width: 96vw;
+	max-height: 92vh;
+	border-radius: 8px;
+	cursor: zoom-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.slider-btn, .slider-dot { transition: none; }
+}
+
 .sprite-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
@@ -527,7 +557,6 @@ header.major p {
 	color: var(--muted);
 }
 
-/* Tech stack chips */
 .stack {
 	list-style: none;
 	margin: 0 0 1.2em 0;
@@ -588,7 +617,6 @@ header.major p {
 	color: #121318 !important;
 }
 
-/* Skills */
 .statistics {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
