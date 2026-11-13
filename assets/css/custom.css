@@ -1,4 +1,3 @@
-
 :root {
 	color-scheme: dark;
 	--bg: #121318;
@@ -178,6 +177,7 @@ header.major p {
 	font-size: 0.8rem;
 	color: var(--accent);
 }
+
 .spotlight {
 	background: var(--panel);
 	border: 1px solid var(--line);
@@ -517,6 +517,10 @@ header.major p {
 
 @media (prefers-reduced-motion: reduce) {
 	.slider-btn, .slider-dot { transition: none; }
+}
+
+#art > .actions {
+	margin-top: 1.5em;
 }
 
 .sprite-grid {
